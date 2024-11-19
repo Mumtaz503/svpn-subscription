@@ -252,4 +252,12 @@ contract SVPN_Subscription is Ownable {
     function getOverallSales() public view returns (uint256) {
         return s_totalMonthlySales + s_totalYearlySales;
     }
+
+    function getMonthlySubscriptionPrice() public view returns (uint256) {
+        return paymentAmountMonthlyInUsd;
+    }
+
+    function getYearlySubscriptionPrice() public view returns (uint256) {
+        return paymentAmountYearlyInWeth;
+    }
 }

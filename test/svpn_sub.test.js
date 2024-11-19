@@ -60,6 +60,14 @@ const { network, getNamedAccounts, ethers, deployments } = require("hardhat");
           console.log(userInfo);
           console.log("Deployer Balance Before: ", depBal);
           console.log("Deployer Balance After: ", depBalAfter);
+          console.log(
+            "Yearly payment: ",
+            await svpn.getYearlySubscriptionPrice()
+          );
+          console.log(
+            "Monthly Payment: ",
+            await svpn.getMonthlySubscriptionPrice()
+          );
         });
       });
     });
